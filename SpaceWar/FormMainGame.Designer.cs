@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainGame));
             this.pictureBoxEnemy = new System.Windows.Forms.PictureBox();
             this.pictureBoxMyShip = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMyShip)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,11 @@
             this.pictureBoxMyShip.TabIndex = 2;
             this.pictureBoxMyShip.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormMainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -65,6 +72,7 @@
             this.Controls.Add(this.pictureBoxEnemy);
             this.Name = "FormMainGame";
             this.Text = "Космические войны";
+            this.Load += new System.EventHandler(this.FormMainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMyShip)).EndInit();
             this.ResumeLayout(false);
@@ -75,6 +83,7 @@
 
         private System.Windows.Forms.PictureBox pictureBoxEnemy;
         private System.Windows.Forms.PictureBox pictureBoxMyShip;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

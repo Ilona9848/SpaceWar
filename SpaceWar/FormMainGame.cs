@@ -15,5 +15,15 @@ namespace SpaceWar
         {
             InitializeComponent();
         }
+
+        private void FormMainGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBoxEnemy.Top += 1;
+        }
     }
 }
